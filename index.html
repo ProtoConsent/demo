@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+  ProtoConsent demo site
+  Copyright (C) 2026 ProtoConsent contributors
+  SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ProtoConsent Demo – Acme Corp</title>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/logo/protoconsent_logo_bold.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/protoconsent_logo_32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ProtoConsent demo site with a complete .well-known/protoconsent.json declaration for testing the extension's site declaration feature.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; form-action 'none'; base-uri 'none';">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header>
+        <div class="brand">
+          <img src="assets/logo/protoconsent_logo_bold.svg" alt="ProtoConsent" class="brand-mark" width="28" height="28">
+          <div class="brand-name">ProtoConsent Demo</div>
+        </div>
+        <div class="header-links-nav">
+          <a class="header-link" href="https://protoconsent.org">protoconsent.org</a>
+          <a class="header-link" href="https://github.com/ProtoConsent/ProtoConsent" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <img src="assets/logo/protoconsent_logo_bold.svg" alt="ProtoConsent logo" class="hero-logo" width="72" height="72">
+          <h1 class="hero-title">ProtoConsent<br>Acme Corp – Demo Site</h1>
+          <p class="hero-subtitle">
+            User-side, purpose-based consent for the web.
+          </p>
+          <p class="hero-subtitle">
+            ProtoConsent is a browser extension to control how websites may use your data,
+            expressed in terms of purposes, from inside your browser.
+            No central server, no tracking, no sharing of personal data — everything stays in your browser by default.
+          </p>
+          <p class="hero-subtitle">
+            This is a demo site that publishes a complete
+            <code><a href="/.well-known/protoconsent.json">.well-known/protoconsent.json</a></code>
+            declaration for testing the ProtoConsent extension.
+          </p>
+          <p class="hero-subtitle">
+            Install the extension, open the popup on this page, and explore the site declaration panel.
+            This demo covers all six purposes, all legal basis values, all sharing scopes,
+            data handling fields, and a rights link.
+          </p>
+
+          <div class="hero-badges">
+            <div class="badge">
+              <span class="badge-dot"></span>
+              <span>Complete .well-known declaration</span>
+            </div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              <span>SDK live test</span>
+            </div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              <span>Fictional data (Acme Corp)</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- DECLARATION SUMMARY -->
+        <section class="card card-spaced">
+          <div class="card-title">Site declaration</div>
+          <h3>What this demo declares</h3>
+          <p>
+            The <code><a href="/.well-known/protoconsent.json">.well-known/protoconsent.json</a></code>
+            file on this site declares the following (fictional) data practices:
+          </p>
+          <ul>
+            <li><strong>Functional</strong> – used, contractual basis, provider: Acme Corp</li>
+            <li><strong>Analytics</strong> – used, consent basis, provider: Google Analytics, sharing: third parties</li>
+            <li><strong>Ads</strong> – used, legitimate interest basis, provider: Google Ads, sharing: within group</li>
+            <li><strong>Personalization</strong> – not used</li>
+            <li><strong>Third-party sharing</strong> – used, public interest basis, provider: Acme Partners, sharing: third parties</li>
+            <li><strong>Advanced tracking</strong> – used, vital interest basis, provider: Acme Corp</li>
+          </ul>
+          <p>
+            <strong>Data handling:</strong> stored in US, international transfers: yes.
+          </p>
+          <p>
+            Open the ProtoConsent popup on this page to see the full declaration rendered with
+            <a href="https://consentcommons.com/" target="_blank" rel="noopener noreferrer">Consent Commons</a> icons.
+            The <span class="wk-pill"><span class="wk-pill-dot"></span>WK ok</span> indicator
+            in the popup header confirms a valid declaration was detected.
+          </p>
+        </section>
+
+        <!-- LIVE SDK TEST -->
+        <section class="card card-spaced sdk-demo-card" id="live-test">
+          <div class="card-title">Live test</div>
+          <h3>Your preferences for this site</h3>
+          <p>
+            This section queries the ProtoConsent extension in real time using the SDK protocol.
+            If the extension is installed, your current preferences for this domain are shown below.
+          </p>
+          <div id="sdk-demo-result"></div>
+        </section>
+
+        <!-- GPC SIGNAL CHECK -->
+        <section class="card card-spaced gpc-demo-card" id="gpc-test">
+          <div class="card-title">Global Privacy Control</div>
+          <h3>GPC signal on this site</h3>
+          <p>
+            ProtoConsent sends a <a href="https://globalprivacycontrol.org/" target="_blank" rel="noopener noreferrer">Sec-GPC</a> header when privacy-relevant purposes are denied.
+            This check reads <code>navigator.globalPrivacyControl</code> to verify whether the signal is active for this page.
+          </p>
+          <div id="gpc-result"></div>
+        </section>
+
+        <!-- CTA -->
+        <section class="card card-spaced">
+          <div class="card-title">Try it yourself</div>
+          <ul>
+            <li><a href="https://github.com/ProtoConsent/ProtoConsent#getting-started-developer-mode" target="_blank" rel="noopener noreferrer">Install the extension</a> in developer mode and open the popup on this page.</li>
+            <li><a href="https://github.com/ProtoConsent/ProtoConsent/blob/main/design/well-known-spec.md" target="_blank" rel="noopener noreferrer">Publish a .well-known/protoconsent.json</a> on your own site to declare your data practices.</li>
+            <li><a href="https://github.com/ProtoConsent/ProtoConsent/tree/main/sdk" target="_blank" rel="noopener noreferrer">Integrate the SDK</a> (MIT) to read user preferences from your pages.</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          ProtoConsent is a browser extension exploring browser-level, purpose-based consent controls for the open web.
+        </div>
+        <div class="footer-links">
+          <a href="https://protoconsent.org">protoconsent.org</a>
+          <a href="https://github.com/ProtoConsent/ProtoConsent" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/ProtoConsent/ProtoConsent/blob/main/design/well-known-spec.md" target="_blank" rel="noopener noreferrer">.well-known spec</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="assets/sdk-demo.js"></script>
+</body>
+</html>

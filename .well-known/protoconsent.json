@@ -1,0 +1,41 @@
+{
+  "protoconsent": "0.1",
+  "purposes": {
+    "functional": {
+      "used": true,
+      "legal_basis": "contractual",
+      "provider": "Acme Corp"
+    },
+    "analytics": {
+      "used": true,
+      "legal_basis": "consent",
+      "provider": "Google Analytics",
+      "sharing": "third_parties"
+    },
+    "ads": {
+      "used": true,
+      "legal_basis": "legitimate_interest",
+      "provider": "Google Ads",
+      "sharing": "within_group"
+    },
+    "personalization": {
+      "used": false
+    },
+    "third_parties": {
+      "used": true,
+      "legal_basis": "public_interest",
+      "provider": "Acme Partners",
+      "sharing": "third_parties"
+    },
+    "advanced_tracking": {
+      "used": true,
+      "legal_basis": "vital_interest",
+      "provider": "Acme Corp"
+    }
+  },
+  "data_handling": {
+    "storage_region": "US",
+    "international_transfers": true
+  },
+  "rights_url": "https://protoconsent.org/privacy.html"
+}
