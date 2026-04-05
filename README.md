@@ -4,7 +4,9 @@
   <img src="https://github.com/ProtoConsent/ProtoConsent/blob/main/design/assets/logo/protoconsent_logo.png" alt="ProtoConsent logo" width="160">
 </p>
 
-<p align="center"><em>User-side, purpose-based consent for the web.</em></p>
+<p align="center"><strong>One place to control how every website uses your data.</strong></p>
+
+<p align="center"><em>User‑side, purpose‑based consent for the web.</em></p>
 
 Demo site for the [ProtoConsent](https://github.com/ProtoConsent/ProtoConsent) browser extension, hosted at [demo.protoconsent.org](https://demo.protoconsent.org).
 
