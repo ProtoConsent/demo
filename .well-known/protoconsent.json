@@ -44,7 +44,7 @@
     "international_transfers": true
   },
   "links": {
-    "policy": "https://demo.protoconsent.org/privacy.html",
-    "rights": "https://demo.protoconsent.org/privacy.html#rights"
+    "policy": "https://protoconsent.org/privacy.html",
+    "rights": "https://demo.protoconsent.org/privacy#your-rights"
   }
 }
