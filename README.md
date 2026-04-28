@@ -27,4 +27,4 @@ Static site served via GitHub Pages — no build step, no dependencies. The `.no
 - **Main repository**: [github.com/ProtoConsent/ProtoConsent](https://github.com/ProtoConsent/ProtoConsent)
 - **Project website**: [protoconsent.org](https://protoconsent.org)
 - **Chrome Web Store**: [Install ProtoConsent](https://chromewebstore.google.com/detail/protoconsent/dkcdkdcclhofocmkecccmikkfmfgfdlb)
-- **`.well-known` spec**: [well-known-spec.md](https://github.com/ProtoConsent/ProtoConsent/blob/main/design/well-known-spec.md)
+- **`.well-known` spec**: [protoconsent-well-known.md](https://github.com/ProtoConsent/ProtoConsent/blob/main/design/spec/protoconsent-well-known.md)
