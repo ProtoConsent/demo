@@ -8,6 +8,12 @@
 
 <p align="center"><em>User‑side, purpose‑based consent for the web</em></p>
 
+<p align="center">
+  <a href="https://github.com/ProtoConsent/ProtoConsent"><strong>Browser extension</strong></a> &middot;
+  <a href="https://github.com/ProtoConsent/data"><strong>Blocklists</strong></a> &middot;
+  <a href="https://protoconsent.org"><strong>Website</strong></a>
+</p>
+
 Demo site for the [ProtoConsent](https://github.com/ProtoConsent/ProtoConsent) browser extension, hosted at [demo.protoconsent.org](https://demo.protoconsent.org).
 
 ## What this site does
